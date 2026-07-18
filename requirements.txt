@@ -1,0 +1,4 @@
+google-play-scraper
+pandas
+beautifulsoup4
+emoji

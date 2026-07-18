@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 42 100% 97%;
+  --foreground: 0 0% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 10%;
+  --primary: 158 64% 14%;
+  --primary-foreground: 45 93% 62%;
+  --secondary: 45 93% 62%;
+  --secondary-foreground: 0 0% 10%;
+  --muted: 120 30% 94%;
+  --muted-foreground: 200 10% 40%;
+  --accent: 120 30% 94%;
+  --accent-foreground: 158 64% 14%;
+  --border: 0 0% 90%;
+  --input: 0 0% 90%;
+  --ring: 158 64% 14%;
+  --radius: 0.75rem;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  color: hsl(var(--foreground));
+  background-color: theme('colors.blinkit.light');
+}
+
+@layer utilities {
+  .stagger-1 { animation-delay: 0.05s; }
+  .stagger-2 { animation-delay: 0.1s; }
+  .stagger-3 { animation-delay: 0.15s; }
+  .stagger-4 { animation-delay: 0.2s; }
+}
