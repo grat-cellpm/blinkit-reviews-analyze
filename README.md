@@ -4,7 +4,7 @@ AI-powered platform that turns Blinkit Google Play Store reviews into actionable
 
 ## Features
 
-- **Review ingestion** — Fetch Blinkit Play Store reviews with incremental updates
+- **Review ingestion** — Fetch Blinkit Play Store & Apple App Store reviews with incremental updates
 - **Preprocessing** — Dedup, clean, normalize while preserving ratings and metadata
 - **LLM analysis** — Sentiment, themes, pain points, shopping behavior, opportunities
 - **Semantic search (RAG)** — Embeddings + ChromaDB + retrieval-augmented answers
@@ -21,7 +21,7 @@ AI-powered platform that turns Blinkit Google Play Store reviews into actionable
 | Frontend | Next.js 14, Tailwind CSS, shadcn/ui, Recharts |
 | Backend | FastAPI, SQLAlchemy, SQLite |
 | AI | Groq (LLM), Sentence Transformers, ChromaDB |
-| Ingestion | google-play-scraper |
+| Ingestion | google-play-scraper, httpx |
 
 ## Quick Start
 
@@ -66,7 +66,7 @@ npm run dev
 
 Dashboard: http://localhost:3000
 
-### 3. Ingest live Play Store reviews (optional)
+### 3. Ingest live App Store & Play Store reviews (optional)
 
 ```bash
 # With backend running and GROQ_API_KEY set:
@@ -113,6 +113,7 @@ See `backend/.env.example`:
 | `DATABASE_URL` | Default: `sqlite:///./data/blinkit.db` |
 | `CHROMA_PATH` | ChromaDB persist directory |
 | `BLINKIT_APP_ID` | Play Store package: `com.grofers.customerapp` |
+| `BLINKIT_APPLE_APP_ID` | Apple App Store ID: `960335206` |
 | `CORS_ORIGINS` | Frontend origins |
 
 ## Business Questions Answered
